@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathaniel B. Virtudez Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* Cat and Sunflower Decorations */
+    body::before, body::after {
+      content: "🐱🌻";
+      font-size: 2.5em;
+      position: fixed;
+    }
+
+    body::before {
+      top: 10px;
+      left: 10px;
+    }
+
+    body::after {
+      bottom: 10px;
+      right: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #264653, #2a9d8f);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      font-family: 'Courier New', Courier, monospace;
+      color: #e9c46a;
+      text-shadow: 2px 2px #264653;
+      letter-spacing: 5px;
+      animation: moveText 3s infinite alternate;
+    }
+
+    @keyframes moveText {
+      0% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(10px);
+      }
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .search-bar {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 1em;
+    }
+
+    .search-bar button {
+      display: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .navbar button {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .navbar button:hover {
+      background-color: #264653;
+      transform: scale(1.1);
+    }
+
+    /* Section */
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #e76f51;
+    }
+
+    .section p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .section .emoji-design {
+      font-size: 3em;
+      text-align: center;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #264653;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact h3 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      animation: fadeIn 2s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .contact form {
+      display: inline-block;
+      max-width: 500px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact button {
+      background-color: #e76f51;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #2a9d8f;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2a9d8f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Nathaniel B. Virtudez</h1>
+    <p>STUDENT | PROGRAMMER | DESIGNER</p>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search this page..." oninput="searchPage()">
+    </div>
+  </section>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <button onclick="scrollToSection('about')">About Me</button>
+    <button onclick="scrollToSection('interests')">Interests</button>
+    <button onclick="scrollToSection('hobbies')">Hobbies</button>
+  </div>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <div class="emoji-design">📖🎓</div>
+    <div class="section-text">
+      <h2>About Me</h2>
+      <p>Hello! My name is Nathaniel Bituin Virtudez. An Information Technology (IT) student with a passion for creativity and storytelling. Born on June 30, 2005, and raised in Brgy. Laguan, Rizal, Laguna, I am a lifelong learner who thrives on acquiring new knowledge and exploring innovative ideas. My journey in IT is fueled by a curiosity for technology and a drive to make meaningful contributions to the field.</p>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="emoji-design">🎶🏋️</div>
+    <div class="section-text">
+      <h2>Interests</h2>
+      <p>When I’m not immersed in my studies or drawing, I dedicate time to personal growth and relaxation. Physical fitness keeps me energized, while listening to music fuels my creativity and helps me unwind. My playlists are a reflection of my eclectic tastes, ranging from soothing melodies to upbeat tracks that keep me motivated.</p>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section id="hobbies" class="section">
+    <div class="emoji-design">🎨💑</div>
+    <div class="section-text">
+      <h2>Hobbies</h2>
+      <p>When I’m not immersed in my studies or drawing, I dedicate time to personal growth and relaxation. Spending quality time with my girlfriend is another highlight of my life. Life is like a canvas, and I’m determined to fill it with vibrant colors, meaningful experiences, and continuous learning.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h3>Contact Me</h3>
+    <form action="mailto:itnotryo@gmail.com" method="post" enctype="text/plain">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright © 2024 Nathaniel B. Virtudez</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function searchPage() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        if (el.textContent.toLowerCase().includes(input)) {
+          el.style.backgroundColor = input ? '#ffffcc' : '';
+        } else {
+          el.style.backgroundColor = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
